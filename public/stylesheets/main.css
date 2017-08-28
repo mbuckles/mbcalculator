@@ -1,0 +1,109 @@
+/*Footer*/
+footer {
+  margin-top: 5rem;
+}
+i.fa.fa-github {
+  margin-left: 15px;
+  margin-top:5px;
+  font-size: 3.5em;
+  vertical-align: middle;
+}
+a.glyphicon.glyphicon-envelope {
+  margin-left: 10px;
+  margin-top:5px;
+  font-size: 2.5em;
+  top: 0.5em;
+}
+/* End Footer*/
+html body {
+  background: #D2B48C;
+}
+
+h1 {
+  color: white;
+  font-family: "Bungee Inline";
+}
+
+h2 {
+  color: white;
+  font-family: "Lobster";
+}
+
+
+#output{
+  background: #BCDDBC;
+  height: 50px;
+  width: 190px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: silver;
+  border-width:3px;
+  margin:5px auto 20px auto;
+  padding-top:5px;
+  padding-right:10px;
+  text-align: right;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+
+#calc{
+  background: #EFF7EF;
+  height: auto;
+  width: 265px;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:5px;
+  padding-bottom:25px;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+#calcTitle{
+  background: #EFF7EF;
+  color:red;
+  height: 25px;
+  width: 190px;
+  margin:7px auto 2px auto;
+  padding-top: 5px;
+  padding-right:10px;
+  text-align: right;
+}
+#calcTitle2{
+    font-size: 15px;
+    font-family: "Revalia";
+  }
+#screen{
+  padding-left:50px;
+  font-size: 25px;
+}
+
+a{
+  margin: 5px;
+  width: 2.6vw;
+  height: 2.6vw;
+}
+.btn{
+  width:43px
+
+}
+.btn-danger{
+ width:43px;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+
+.mdBtn{
+  width:80px;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+.largeBtn{
+  width:95px;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}

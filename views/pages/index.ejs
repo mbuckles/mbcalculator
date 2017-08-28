@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+<body>
+  <div class="text-center">
+    <h1>JavaScript Calculator</h1>
+    <h2>by Morty Buckles</h2>
+  </div>
+
+  <div class="text-center" id = "calc">
+
+    <div  id= "calcTitle">
+    <span id="calcTitle2">MB-21x</span>
+    <br/>
+  </div>
+
+  <div  id= "output">
+    <span id="screen">0</span>
+    <hr/>
+    <br/>
+  </div>
+    <a class= "btn btn-danger active" id="deleteAll">CE</a>
+    <a class= "btn btn-danger active" id= "backspace">C</a>
+    <a class= "btn btn-primary active" id= "/">/</a>
+    <a class= "btn btn-primary active" id= "*">X</a>
+    <br/>
+    <a class= "btn btn-primary active" id= "7">7</a>
+    <a class= "btn btn-primary active" id= "8">8</a>
+    <a class= "btn btn-primary active" id= "9">9</a>
+    <a class= "btn btn-primary active" id= "-">-</a>
+    <br/>
+    <a class= "btn btn-primary active" id= "4">4</a>
+    <a class= "btn btn-primary active" id= "5">5</a>
+    <a class= "btn btn-primary active" id= "6">6</a>
+    <a class= "btn btn-primary active" id= "+">+</a>
+    <br/>
+    <a class= "btn btn-primary active" id= "1">1</a>
+    <a class= "btn btn-primary active" id= "2">2</a>
+    <a class= "btn btn-primary active" id= "3">3</a>
+    <a class= "btn btn-primary active" id= ".">.</a>
+    <br/>
+    <a class= "btn btn-primary mdBtn active " id= "0">0</a>
+    <a class= "btn btn-primary largeBtn active" id= "total">=</a>
+   </div>
+ <footer>
+   <% include ../partials/footer.ejs %>
+   <script>
+   $(document).ready(function(){
+
+     //Store the inputs
+     var inputs = [""];
+     // string to store current input string
+     var  totalString = [];
+     // validate all but the .
+     var ops1 = ["+","-","/","*","%"];
+     // validate the .
+     var ops2 = ["."];
+
+     var nums = [0,1,2,3,4,5,6,7,8,9];
+
+      function getValue(input){
+        //check for duplicate .
+        if(ops2.includes(inputs[inputs.length-1]===true && input===".")){
+          console.log("Duplicate '.' ");
+        }
+        else if (inputs.length===1 && ops1.includes(input)===false){
+          inputs.push(input);
+        }
+        else if(ops1.includes(inputs[inputs.length-1])===false){
+          inputs.push(input);
+      }
+        else if(nums.includes(Number(input))){
+          inputs.push(input);
+      }
+        update();
+      }
+     //updates the current string
+       function update(){
+        totalString = inputs.join("");
+         $("#screen").html(totalString);
+      }
+     //updates the total string
+     function getTotal(){
+       totalString = inputs.join("");
+        $("#screen").html(eval(totalString));
+      }
+     //tells the button to run func when clicked
+     $("a").on("click", function(){
+       if(this.id==="deleteAll"){
+         inputs = [""];
+         update();
+       }
+       else if (this.id==="backspace"){
+         inputs.pop();
+         update();
+       }
+     else if (this.id==="total"){
+       getTotal();
+     }
+       else {
+         if(inputs[inputs.length-1].indexOf("+","-","/","*","%")===-1){
+           getValue(this.id);
+         }
+         else{
+           getValue(this.id);
+         }
+       }
+     });
+   });
+   </script>
+ </footer>
+</div>
+</html>
+</body>
